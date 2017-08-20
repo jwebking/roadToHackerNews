@@ -1,3 +1,30 @@
+#RoadToHackerNews
+
+Building a Hacker News viewer using their Search Hacker News API (https://hn.algolia.com/api) and working alongside a tutorial/book called "The Road to React". No Redux used. Fired the app up using create-react-app. 
+
+I don't really like the authors coding style, and will be refactoring the components into their own files, and cleaning up the styling. Recently started learning FlexBox so I'll probably incorportate that here. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
