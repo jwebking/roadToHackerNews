@@ -86,7 +86,7 @@ class App extends Component {
     const { searchKey, results } = this.state;
     const { hits, page } = results[searchKey];
 
-    const isNotId = item => item.objectID !== id;
+    const isNotId = props => props.objectID !== id;
     const updatedHits = hits.filter(isNotId);
 
     this.setState({
@@ -160,23 +160,23 @@ const Search = ({
 
 const Table = ({ list, onDismiss }) =>
   <div className="table">
-    { list.map(item =>
-      <div key={item.objectID} className="table-row">
+    { list.map(props =>
+      <div key={props.objectID} className="table-row">
         <span style={{ width: '40%' }}>
-          <a href={item.url}>{item.title}</a>
+          <a href={props.url}>{props.title}</a>
         </span>
         <span style={{ width: '30%' }}>
-          {item.author}
+          {props.author}
         </span>
         <span style={{ width: '10%' }}>
-          {item.num_comments}
+          {props.num_comments}
         </span>
         <span style={{ width: '10%' }}>
-          {item.points}
+          {props.points}
         </span>
         <span style={{ width: '10%' }}>
           <Button
-            onClick={() => onDismiss(item.objectID)}
+            onClick={() => onDismiss(props.objectID)}
             className="button-inline"
           >
             Dismiss
